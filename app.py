@@ -9,7 +9,7 @@ app = Flask(__name__, static_url_path='', static_folder=os.path.abspath(os.path.
 init_db()
 
 # Stripe configuration (Placeholder - User needs to provide key)
-stripe.api_key = os.environ.get('STRIPE_SECRET_KEY', 'sk_test_placeholder')
+stripe.api_key = os.environ.get('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', 'sk_test_placeholder')
 
 @app.route('/')
 def index():
