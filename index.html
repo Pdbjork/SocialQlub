@@ -12,7 +12,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your LGBTQ+ Social Club Name Here]</title>
+    <title>[QLUB] | Exclusive LGBTQ+ Social Club</title>
+    <meta name="description"
+        content="Join QLUB, the premier exclusive social club for the LGBTQ+ community. Curated events, meaningful connections, and a vibrant network.">
+    <meta name="keywords" content="LGBTQ, social club, exclusive, networking, events, gay, queer, community">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qlub.social/">
+    <meta property="og:title" content="[QLUB] | The Future of Connection">
+    <meta property="og:description"
+        content="An exclusive, curated social club for the LGBTQ+ community. Experience connection, culture, and community like never before.">
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://qlub.social/">
+    <meta property="twitter:title" content="[QLUB] | The Future of Connection">
+    <meta property="twitter:description"
+        content="An exclusive, curated social club for the LGBTQ+ community. Experience connection, culture, and community like never before.">
+    <meta property="twitter:image"
+        content="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop">
+
+    <!-- Google Analytics (Placeholder) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'YOUR_GA_MEASUREMENT_ID');
+    </script>
+    -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,21 +133,36 @@
                         <h3>Supporter</h3>
                         <h4>$100+</h4>
                         <p>Recognition on our founders wall and personalized updates.</p>
-                        <a href="#" class="button">Select</a>
+                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
                     </div>
                     <div class="card">
                         <h3>Advocate</h3>
                         <h4>$250+</h4>
                         <p>Early access to membership and exclusive virtual events.</p>
-                        <a href="#" class="button">Select</a>
+                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
                     </div>
                     <div class="card">
                         <h3>Visionary</h3>
                         <h4>$1000+</h4>
                         <p>VIP access to launch events and private dinners with founders.</p>
-                        <a href="#" class="button">Select</a>
+                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="section-padding"
+            style="background: var(--surface-color); border-top: 1px solid var(--border-color);">
+            <div class="container text-center">
+                <h2>Stay in the Loop</h2>
+                <p style="margin-bottom: 2rem;">Join our waitlist for exclusive updates and early access.</p>
+                <form id="newsletterForm" style="max-width: 400px; margin: 0 auto; display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="Enter your email" required
+                        style="flex: 1; padding: 1rem; background: var(--bg-color); border: 1px solid var(--border-color); color: var(--text-primary); outline: none;">
+                    <button type="submit" class="button primary-button">Subscribe</button>
+                </form>
+                <p id="newsletterSuccess" style="display: none; color: var(--text-primary); margin-top: 1rem;">Welcome
+                    to the club. You're on the list.</p>
             </div>
         </section>
 

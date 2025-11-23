@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Target elements to animate
-    const animatedElements = document.querySelectorAll('.card, h2, p, .button');
+    const animatedElements = document.querySelectorAll('.card, h2, p, .button, #newsletter');
     animatedElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Progress Bar Logic (Demo)
     const goal = 50000;
     let raised = 12500; // Starting amount for demo
-    
+
     const updateProgress = () => {
         const percentage = Math.min((raised / goal) * 100, 100);
         const progressBar = document.getElementById('progressBar');
         const raisedAmount = document.getElementById('raisedAmount');
-        
-        if(progressBar && raisedAmount) {
+
+        if (progressBar && raisedAmount) {
             progressBar.style.width = percentage + '%';
             raisedAmount.textContent = raised.toLocaleString();
         }
@@ -56,4 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
     updateProgress();
+
+    // Newsletter Form Logic
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('input[type="email"]').value;
+
+            // Here you would typically send the email to your backend or API
+            console.log('Newsletter subscription:', email);
+
+            // Show success message
+            newsletterForm.style.display = 'none';
+            const successMsg = document.getElementById('newsletterSuccess');
+            if (successMsg) {
+                successMsg.style.display = 'block';
+                successMsg.classList.add('fade-in', 'visible');
+            }
+        });
+    }
 });
