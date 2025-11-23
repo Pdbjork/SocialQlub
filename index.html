@@ -49,6 +49,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body>
@@ -144,19 +145,19 @@
                         <h3>Supporter</h3>
                         <h4>$100+</h4>
                         <p>Recognition on our founders wall and personalized updates.</p>
-                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
+                        <button onclick="checkout(10000)" class="button">Select</button>
                     </div>
                     <div class="card">
                         <h3>Advocate</h3>
                         <h4>$250+</h4>
                         <p>Early access to membership and exclusive virtual events.</p>
-                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
+                        <button onclick="checkout(25000)" class="button">Select</button>
                     </div>
                     <div class="card">
                         <h3>Visionary</h3>
                         <h4>$1000+</h4>
                         <p>VIP access to launch events and private dinners with founders.</p>
-                        <a href="https://stripe.com" target="_blank" class="button">Select (Config Required)</a>
+                        <button onclick="checkout(100000)" class="button">Select</button>
                     </div>
                 </div>
             </div>
