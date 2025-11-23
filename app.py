@@ -8,8 +8,8 @@ app = Flask(__name__, static_url_path='', static_folder=os.path.abspath(os.path.
 # Initialize database
 init_db()
 
-# Stripe configuration (Placeholder - User needs to provide key)
-stripe.api_key = os.environ.get('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', 'sk_test_placeholder')
+# Stripe configuration
+stripe.api_key = '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'
 
 @app.route('/')
 def index():

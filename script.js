@@ -120,7 +120,7 @@ async function checkout(amount) {
             return;
         }
 
-        const stripe = Stripe('pk_test_placeholder'); // Replace with your publishable key
+        const stripe = Stripe('pk_live_51ODwnbI4Pz9XEe4XjtIeQ4G1qOXSfvrdUgQ4hFnbjLrMdg4yeKH4Pv3I54qWGluEIRZC6Q4EifUi8fnbQH93lLVN00fL5xAlKi'); // Replace with your publishable key
         const result = await stripe.redirectToCheckout({
             sessionId: session.id,
         });
