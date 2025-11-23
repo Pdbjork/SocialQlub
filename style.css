@@ -5,19 +5,20 @@
     --surface-color: #111111;
     --text-primary: #FFFFFF;
     --text-secondary: #888888;
-    --accent-color: #FFFFFF; /* Stark white accent */
+    --accent-color: #FFFFFF;
+    /* Stark white accent */
     --border-color: #222222;
-    
+
     /* Typography */
     --font-primary: 'Inter', sans-serif;
     --font-heading: 'Inter', sans-serif;
-    
+
     /* Spacing */
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 8rem;
-    
+
     /* Animation */
     --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: 0.3s ease;
@@ -38,7 +39,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: -0.03em;
@@ -83,8 +87,15 @@ ul {
     padding: var(--spacing-xl) 0;
 }
 
-.text-center { text-align: center; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Buttons */
 .button {
@@ -126,7 +137,7 @@ header {
     padding: var(--spacing-md) 0;
     background: rgba(5, 5, 5, 0.8);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 header .container {
@@ -170,7 +181,7 @@ nav a:hover {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(5,5,5,0.3), var(--bg-color));
+    background: linear-gradient(to bottom, rgba(5, 5, 5, 0.3), var(--bg-color));
 }
 
 .hero-content {
@@ -208,8 +219,15 @@ footer {
 
 /* Animations */
 @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in {
@@ -221,4 +239,46 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.stat-item {
+    padding: var(--spacing-md);
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Enhanced Card Grid */
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
